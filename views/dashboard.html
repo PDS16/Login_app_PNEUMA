@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>      
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+        margin-left:auto;
+        margin-right:auto;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #E4F1FE;}
+        
+        #customers tr:hover {background-color: #B4D8FF;
+        transform: scale(1.03);}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #7FBAFB;
+          color: white;
+        }
+        </style>
+</head>
+<body>
+
+    <h2 style="font-family:Arial; text-align:center;">Current User : <%=name%></h2>
+    <h2 style="font-family:Arial; text-align:center;">Email : <%=email%></h2>
+    <h2 style="font-family:Arial; text-align:center;">Age : <%=age%></h2>
+    <h2 style="font-family:Arial; text-align:center;">Phone no. : <%=phone%></h2>
+
+    <table id="customers">
+        <tr>
+          <th>name</th>
+          <th>email</th>
+          <th>age</th>
+          <th>phone</th>
+        </tr>
+        <% table.forEach((row)=>{%>
+            <tr>
+                <td><%=row.name%></td>
+                <td><%=row.email%></td>
+                <td><%=row.age%></td>
+                <td><%=row.phoneno%></td>
+              </tr>
+        <%});%>
+      </table>
+      <script>
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+        </script>
+</body></html>  
+
+
