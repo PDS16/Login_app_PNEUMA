@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "heroku-postbuild": "npm install && npm run dev"
+    "heroku-postbuild": "npm install && npm run bulid"
   },
   "keywords": [],
   "author": "",
