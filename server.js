@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const {pool} = require("./dbConfig.js")
 const PORT = process.env.PORT || 4000;
-const session = require("express-session");
+const session = require("cookie-session");
 const flash = require("express-flash");
 const path = require("path")
 app.set("view engine","html");
